@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('mu/{tyso}',function($tyso){
+	echo "ty so la: ".$tyso;
+})->where(['tyso'=>'[0-9a-z]{3}+']);
+
+ route::get('xsvietlot/{maso}',function($maso){
+ 	echo "ma du thuong vl : ".$maso;
+ })->where(['maso'=>'[0-9a-z]{2,13}']);
